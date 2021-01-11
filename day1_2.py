@@ -31,11 +31,12 @@ for test_case in range(1, T + 1):
     K, N, M = map(int, input().split()) # K: 최대 이동 정류장 수/ N: 종점/ M: 충전기 수
     arr = list(map(int, input().split())) # arr: 충전기가 있는 정류장 번호
     move = K # move: 남은 이동 수
-    cnt = 0; # cnt: 충전 횟수
-    j = 0
-    for i in range (0, N):
-        move -= 1
-        if(move<0) : break;
-        if(i == arr[j] & move < arr[j+1]-arr[j]): cnt += 1; move += K;
-        j += 1
+    cnt = 0 # cnt: 충전 횟수
+    cur = 0 # cur: 현재 위치
+    for i in range(0, M) :
+        move -= arr[i] - cur
+        cur = arr[i]
+        if(move)
+
     print("#%d %d %d" %(test_case, cnt, move))
+ 
