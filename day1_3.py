@@ -1,7 +1,3 @@
-#sw expert academy
-#1일차 - 전기버스
-
-
 # 표준 입력 예제
 '''
 a = int(input())                        정수형 변수 1개 입력 받는 예제
@@ -24,17 +20,17 @@ print(f)                                문자열 1개 출력하는 예제
 
 import sys
 
-sys.stdin = open("input2.txt", "r")
+sys.stdin = open("input3.txt", "r")
 
 T = int(input())
 for test_case in range(1, T + 1):
-    K, N, M = map(int, input().split()) # K: 최대 이동 정류장 수/ N: 종점/ M: 충전기 수
-    arr = list(map(int, input().split())) # arr: 충전기가 있는 정류장 번호
-    move = K # move: 남은 이동 수
-    cnt = 0 # cnt: 충전 횟수
-    cur = 0 # cur: 현재 위치
-    
-    
-
-    print("#%d %d %d" %(test_case, cnt, move))
- 
+    N = int(input())
+    a=list(map(int, list(input())))
+    cnt_list = [0 for i in range(10)]
+    for i in a:
+        cnt_list[i] += 1
+    max_num = 0
+    max_cnt = 0
+    for i in range(9, -1, -1):
+        if(cnt_list[i]>max_cnt): max_cnt = cnt_list[i]; max_num = i;
+    print("#%d %d %d" %(test_case,max_num,max_cnt))
