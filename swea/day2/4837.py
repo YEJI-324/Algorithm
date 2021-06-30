@@ -9,7 +9,7 @@ def subset(a, n, k):
     result = 0
     if n == 1:
         for i in range(len(a)): 
-            if a[i] == k: result += 1;
+            if a[i] == k: result += 1
     else:
         for i in range(len(a)):
             temp = copy.deepcopy(a)
