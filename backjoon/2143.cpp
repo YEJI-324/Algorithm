@@ -1,4 +1,4 @@
-// ÇÕÀÌ 0ÀÎ ³× Á¤¼ö
+// ë‘ ë°°ì—´ì˜ í•©
 #define _CRT_SECURE_NO_WARNINGS
 #include <cstdio>
 #include <vector>
@@ -24,7 +24,7 @@ int main() {
 		B.push_back(temp);
 	}
 
-	// AÀÇ ºÎÁıÇÕ
+	// Aì˜ ë¶€ì§‘í•©
 	vector<long long> A_sub;
 	for (int i = 0; i < n; i++) {
 		long long sum = A[i];
@@ -34,7 +34,7 @@ int main() {
 			A_sub.push_back(sum);
 		}
 	}
-	// BÀÇ ºÎÁıÇÕ
+	// Bì˜ ë¶€ì§‘í•©
 	vector<long long> B_sub;
 	for (int i = 0; i < m; i++) {
 		long long sum = B[i];
@@ -45,11 +45,11 @@ int main() {
 		}
 	}
 
-	// Á¤·ÄÇÏ±â
+	// ì •ë ¬í•˜ê¸°
 	sort(A_sub.begin(), A_sub.end());
 	sort(B_sub.begin(), B_sub.end());
 
-	// Åõ Æ÷ÀÎÅÍ »ç¿ëÇÏ±â
+	// íˆ¬ í¬ì¸í„° ì‚¬ìš©í•˜ê¸°
 	long long ans = 0;
 	long long cnt = 0;
 	int B_idx = B_sub.size() - 1;
