@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import sys
 
 n = int(input())
@@ -23,7 +22,6 @@ def binary(target, arr, start, end):
 
 for target in m_list :
     print(binary(target, n_list, 0, len(n_list)-1))
-=======
 #
 #첫째 줄에 자연수 N(1 ≤ N ≤ 100,000)이 주어진다. 
 # 다음 줄에는 N개의 정수 A[1], A[2], …, A[N]이 주어진다. 
@@ -38,12 +36,11 @@ for target in m_list :
 #5
 #1 3 7 9 5
 
-N = int(input())
-A = []
+# N = int(input())
+# A = []
 
-for _ in range(N):
-    A.append(int(input())
+# for _ in range(N):
+#     A.append(int(input())
 
 
-print(A[0])
->>>>>>> d8c6944be499b2fbd0edaf5566776fb24ea06fd1
+# print(A[0])
