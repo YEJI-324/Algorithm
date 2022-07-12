@@ -5,6 +5,8 @@
 # 3. 탐색 시작할 노드 번호 v
 # 4. 간선 연결된 노드
 
+from collections import deque
+
 n, m, v = map(int, input().split())
 
 graph = [[] for _ in range(n+1)]
@@ -20,8 +22,26 @@ def dfs(v):
         print(v, end=' ')
 
     visited[v] = True
+    graph[v].sort()
     for i in graph[v]:
         if not visited[i]:
             dfs(i)
 
-dfs(1)
+dfs(v)
+print()
+
+visited = [False] * (n+1)
+
+def bfs(v):
+    queue = deque([v])
+    visited[v] = True
+
+    while queue:
+        v = queue.popleft()
+        print(v, end=' ')
+        for i in graph[v]:
+            if not visited[i]:
+                queue.append(i)
+                visited[i] = True
+
+bfs(v)
